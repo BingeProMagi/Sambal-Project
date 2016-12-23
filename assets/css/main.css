@@ -516,5 +516,21 @@ body {
     height: 177px;
     margin-left: 3px; } }
 
-h1 {
-  text-align: center; }
+section.header {
+  height: 105px;
+  background-color: black; }
+  section.header h1 {
+    color: #EEB560;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase; }
+
+section.main .lastWinner {
+  margin-top: 50px; }
+
+section.main .badge {
+  font-size: 20px;
+  padding: 8px 12px; }

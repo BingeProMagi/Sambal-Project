@@ -1,0 +1,28 @@
+Game of thrones the game
+
+Tanke med hemsidan?
+- En plats där Jag och Malin ska kunna lägga upp bilder
+- Ha ett ställe att samla alla bilder 
+- Blir en anledning till att använda kameran igen och redigera bilder
+- Att träna på olika saker inom design och webbutveckling
+
+Vad ska användas vid utvecklingen?
+- Git
+- Jekyll
+- Gulp
+- Pug
+- SASS
+- Bootstrap
+- jQuerty
+- AFFINITY DESIGNER
+- http://fontawesome.io/icons/
+
+Effekter och funktioner 
+
+
+https://affinity.serif.com/en-gb/
+
+
+
+
+
