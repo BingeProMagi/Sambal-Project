@@ -506,7 +506,7 @@ section.header {
     text-transform: uppercase; }
 
 section.main .row {
-  margin-top: 30px; }
+  margin-top: 20px; }
   section.main .row h3 {
     text-align: center; }
 
@@ -516,4 +516,40 @@ section.main .badge {
 
 section.wrapper {
   height: 50vh;
-  background-color: green; }
+  background-image: url(../img/battle.jpg);
+    background-image-position: center;
+    background-image-size: cover;
+    background-image-height: 100vh; }
+  section.wrapper .btn {
+    background-color: #e6ac00;
+    border-color: #8f6b00;
+    position: absolute;
+    left: 50vw;
+    top: 35vh; }
+
+section#battleground #battle-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); }
+
+section#battleground #battle {
+  background-image: url(../img/battle.jpg);
+    background-image-position: center;
+    background-image-size: cover;
+  border: 1px solid;
+  position: fixed;
+  width: 90vw;
+  height: 90vh;
+  display: none;
+  top: 5vh;
+  left: 5vw;
+  -webkit-box-shadow: 0px 5px 8px 6px rgba(0, 0, 0, 0.49);
+          box-shadow: 0px 5px 8px 6px rgba(0, 0, 0, 0.49); }
+  section#battleground #battle #end {
+    background-color: #e6ac00;
+    border-color: #8f6b00;
+    position: absolute; }
