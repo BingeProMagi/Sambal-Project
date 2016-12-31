@@ -18,18 +18,6 @@ $(function(){
 	});
 	$('#end').click(function(){
 		$(this).parent().hide();
-	  	$('#my-popup-background').css('display','none');
+	  	$('#battle-background').css('display','none');
 	});
 });
-
-
-// Creating player object
-function Players(name){
-	this.name = name;
-	/*this.castle = castle;
-	this.wins = wins;
-	this.lastWin = lastWin;
-	this.currentTeam = currentTeam;*/
-}
-
-
