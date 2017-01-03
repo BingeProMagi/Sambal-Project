@@ -1,6 +1,8 @@
 
 	// Global variables  	
 var playing = ["Hannes", "Sandra", "Malin", "Markus", "Gustav", "Rangvi"];
+var houses = ["Baratheon", "Greyjoy", "Tyrell", "Martell", "Lannister", "Stark",];
+
 var play = [];
 	// This is the DOM-Ready
 $(function(){
@@ -15,9 +17,19 @@ $(function(){
 	$('#start').click(function(){
 		$('#battle-background').show();
   		$('#battle').show();
+  		$('.knupp').css('display','block');
+
+  		play.forEach(function(players){
+	      players.renderAll();
+	   	});
+
 	});
 	$('#end').click(function(){
 		$(this).parent().hide();
 	  	$('#battle-background').css('display','none');
+	  	$('#battle').css('display','none');
+	  	$('.dingdong').html(" ");
+	  	
 	});
 });
+	
