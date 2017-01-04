@@ -10,7 +10,7 @@ function Players(name){
 }
 
 Players.prototype.renderAll = function(){
-	var creator = $('<li class="list-group-item">'+ this.name +'</li>')
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>')
 	$('.dingdong').append(creator);
 }
 

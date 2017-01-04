@@ -527,6 +527,8 @@ section.wrapper {
     position: absolute;
     left: 50vw;
     top: 35vh; }
+    section.wrapper .btn:hover {
+      background-color: #b48110; }
 
 section#battleground #battle-background {
   position: fixed;
@@ -558,3 +560,33 @@ section#battleground #battle {
     background-color: #e6ac00;
     border-color: #8f6b00;
     position: absolute; }
+    section#battleground #battle #end:hover {
+      background-color: #b48110; }
+  section#battleground #battle #mostWins {
+    background-color: #a32f1d;
+    margin: 0 10px;
+    border-color: #8e0700; }
+    section#battleground #battle #mostWins:hover {
+      background-color: #7f1605; }
+  section#battleground #battle #last {
+    background-color: #45793a;
+    border-color: #17480d; }
+    section#battleground #battle #last:hover {
+      background-color: #2d6521; }
+
+section#battleground .dingdong {
+  margin-top: 30px;
+  margin-left: 14vw;
+  text-align: center;
+  width: 30vw; }
+
+section#battleground .dinghouse {
+  margin-top: 30px;
+  text-align: center;
+  width: 30vw; }
+
+section#battleground .LannisterBg {
+  background-color: red; }
+
+section#battleground .martellBg {
+  background-color: orange; }
