@@ -578,15 +578,57 @@ section#battleground .dingdong {
   margin-top: 30px;
   margin-left: 14vw;
   text-align: center;
-  width: 30vw; }
+  width: 326px; }
 
 section#battleground .dinghouse {
   margin-top: 30px;
   text-align: center;
   width: 30vw; }
 
-section#battleground .LannisterBg {
-  background-color: red; }
+section#battleground .listBaratheon {
+  background-color: yellow;
+  color: black; }
 
-section#battleground .martellBg {
-  background-color: orange; }
+section#battleground .listGreyjoy {
+  background-color: black;
+  color: white; }
+
+section#battleground .listLannister {
+  background-color: red;
+  color: black; }
+
+section#battleground .listMartell {
+  background-color: orange;
+  color: black; }
+
+section#battleground .listStark {
+  background-color: lightblue;
+  color: black; }
+
+section#battleground .listTyrell {
+  background-color: lightgreen;
+  color: black; }
+
+section#battleground .dropdown-toggle {
+  padding: 10px 15px;
+  width: 326px;
+  height: 53px;
+  font-size: 20px; }
+
+section#battleground .dropdown-menu {
+  width: 326px;
+  font-size: 20px;
+  margin-left: 25px;
+  padding: 0; }
+  section#battleground .dropdown-menu li {
+    padding-top: 11px;
+    text-align: center;
+    height: 52px; }
+    section#battleground .dropdown-menu li:hover {
+      background-color: grey;
+      color: white; }
+    section#battleground .dropdown-menu li a {
+      display: inline; }
+      section#battleground .dropdown-menu li a:hover {
+        background-color: grey;
+        color: white; }
