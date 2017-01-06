@@ -18,7 +18,7 @@ $(function(){
 	});
 	$('#end').click(function(){
 		$(this).parent().hide();
-	  	$('#my-popup-background').css('display','none');
+	  	$('#battle-background').css('display','none');
 	});
 });
 
