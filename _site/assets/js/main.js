@@ -19,7 +19,7 @@ $(function(){
 		$('#battle-background').show();
   		$('#battle').show();
   		$('.knupp').css('display','block');
-
+  		// Render Players
   		play.forEach(function(players){
 	      players.renderAll();
 	   	});
@@ -30,6 +30,18 @@ $(function(){
 	   		//<li class="list-group-item house'+ houses[i] +'">House</li>
 	   	};
 	});
+	
+	$('.dinghouse').on('click', 'li', function(event) {
+		
+		event.preventDefault();
+		
+		var text = $(this).text();
+		var parents = $(this).parents();
+
+		console.log( text, "och dess parent class", parents[3] );
+
+	});
+
 
 
 	// click-function to end the battle

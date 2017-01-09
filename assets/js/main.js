@@ -36,12 +36,9 @@ $(function(){
 	$('#end').click(function(){
 		$(this).parent().hide();
 	  	$('#battle-background').css('display','none');
-<<<<<<< HEAD
-=======
 	  	$('#battle').css('display','none');
 	  	$('.dingdong').html(" ");
 	  	$('.dinghouse').html(" ");
->>>>>>> e2eba91cb3a4fa42cf470fc94c9d93ef7639b20a
 	});
 	
 		$('#battle').on('click', '.houseBaratheon', function() {

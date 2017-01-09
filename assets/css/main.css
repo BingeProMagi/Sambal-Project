@@ -632,3 +632,6 @@ section#battleground .dropdown-menu {
       section#battleground .dropdown-menu li a:hover {
         background-color: grey;
         color: white; }
+
+section#battleground .listGreyjoy {
+  color: white; }
