@@ -1,5 +1,3 @@
-
-
 // Players class
 
 function Players(name){
@@ -16,20 +14,26 @@ Players.prototype.renderAll = function(){
 };
 
 Players.prototype.changeTeam = function(input){
-	// 
 	this.currentTeam = input;
-	
+};
+
+Players.prototype.randomTeam = function() {
+
+	var randomNumber = Math.floor(Math.random()*racerHouses.length);
+	var randomHouse = racerHouses[randomNumber];
+	racerHouses.splice(randomNumber,1);
+	this.currentTeam = randomHouse;
 };
 
 Players.prototype.renderHouse = function(){
 		
-		if(!this.currentTeam){
-   			var creator = $('<div class="dropdown"><button class="btn btn-default dropdown-toggle house" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Houses  <span class="caret"></span></button><ul class="dropdown-menu drop'+ this.name +'" aria-labelledby="dropdownMenu1"><li class="list'+houses[0]+'">'+houses[0]+'</li><li class="list'+houses[1]+'">'+houses[1]+'</li><li class="list'+houses[2]+'">'+houses[2]+'</li><li class="list'+houses[3]+'">'+houses[3]+'</li><li class="list'+houses[4]+'">'+houses[4]+'</li><li class="list'+houses[5]+'">'+houses[5]+'</li></ul></div>');
-   			$('.dinghouse').append(creator);
-   		}else{
-   			var creator = $('<div class="dropdown"><button class="btn btn-default dropdown-toggle house" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'+ this.currentTeam +'<span class="caret"></span></button><ul class="dropdown-menu drop'+ this.name +'" aria-labelledby="dropdownMenu1"><li class="list'+houses[0]+'">'+houses[0]+'</li><li class="list'+houses[1]+'">'+houses[1]+'</li><li class="list'+houses[2]+'">'+houses[2]+'</li><li class="list'+houses[3]+'">'+houses[3]+'</li><li class="list'+houses[4]+'">'+houses[4]+'</li><li class="list'+houses[5]+'">'+houses[5]+'</li></ul></div>');
-   			$('.dinghouse').append(creator);
-   		}
+	if(!this.currentTeam){
+		var creator = $('<div class="dropdown"><button class="btn btn-default dropdown-toggle house" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Houses  <span class="caret"></span></button><ul class="dropdown-menu drop'+ this.name +'" aria-labelledby="dropdownMenu1"><li class="list'+houses[0]+'">'+houses[0]+'</li><li class="list'+houses[1]+'">'+houses[1]+'</li><li class="list'+houses[2]+'">'+houses[2]+'</li><li class="list'+houses[3]+'">'+houses[3]+'</li><li class="list'+houses[4]+'">'+houses[4]+'</li><li class="list'+houses[5]+'">'+houses[5]+'</li></ul></div>');
+		$('.dinghouse').append(creator);
+	}else{
+		var creator = $('<div class="dropdown"><button class="btn btn-default dropdown-toggle house" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'+ this.currentTeam +'<span class="caret"></span></button><ul class="dropdown-menu drop'+ this.name +'" aria-labelledby="dropdownMenu1"><li class="list'+houses[0]+'">'+houses[0]+'</li><li class="list'+houses[1]+'">'+houses[1]+'</li><li class="list'+houses[2]+'">'+houses[2]+'</li><li class="list'+houses[3]+'">'+houses[3]+'</li><li class="list'+houses[4]+'">'+houses[4]+'</li><li class="list'+houses[5]+'">'+houses[5]+'</li></ul></div>');
+		$('.dinghouse').append(creator);
+	}
 };
 
 Players.prototype.castle = function(input){

@@ -552,41 +552,43 @@ section#battleground #battle {
   left: 5vw;
   -webkit-box-shadow: 0px 5px 8px 6px rgba(0, 0, 0, 0.49);
           box-shadow: 0px 5px 8px 6px rgba(0, 0, 0, 0.49); }
-  section#battleground #battle .knupp {
-    position: absolute;
-    left: 40vw;
-    top: 80vh; }
-  section#battleground #battle #end {
-    background-color: #e6ac00;
-    border-color: #8f6b00;
-    position: absolute; }
-    section#battleground #battle #end:hover {
-      background-color: #b48110; }
-  section#battleground #battle #mostWins {
-    background-color: #a32f1d;
-    margin: 0 10px;
-    border-color: #8e0700; }
-    section#battleground #battle #mostWins:hover {
-      background-color: #7f1605; }
-  section#battleground #battle #last {
-    background-color: #45793a;
-    border-color: #17480d; }
-    section#battleground #battle #last:hover {
-      background-color: #2d6521; }
+  section#battleground #battle .row {
+    margin-top: 7vh; }
+    section#battleground #battle .row #end {
+      background-color: #e6ac00;
+      border-color: #8f6b00; }
+      section#battleground #battle .row #end:hover {
+        background-color: #b48110; }
+    section#battleground #battle .row #mostWins {
+      background-color: #a32f1d;
+      border-color: #8e0700; }
+      section#battleground #battle .row #mostWins:hover {
+        background-color: #7f1605; }
+    section#battleground #battle .row #last {
+      background-color: #45793a;
+      border-color: #17480d; }
+      section#battleground #battle .row #last:hover {
+        background-color: #2d6521; }
+    section#battleground #battle .row #end {
+      display: none; }
+    section#battleground #battle .row #startMatch {
+      background-color: #e6ac00;
+      border-color: #8f6b00; }
+      section#battleground #battle .row #startMatch:hover {
+        background-color: #b48110; }
 
 section#battleground .dingdong {
-  margin-top: 30px;
-  margin-left: 14vw;
+  margin-top: 6vh;
   text-align: center;
   width: 326px; }
 
 section#battleground .dinghouse {
-  margin-top: 30px;
+  margin-top: 6vh;
   text-align: center;
   width: 30vw; }
 
 section#battleground .listBaratheon {
-  background-color: yellow;
+  background-color: #f5ed68;
   color: black; }
 
 section#battleground .listGreyjoy {
@@ -594,7 +596,7 @@ section#battleground .listGreyjoy {
   color: white; }
 
 section#battleground .listLannister {
-  background-color: red;
+  background-color: #a22e21;
   color: black; }
 
 section#battleground .listMartell {
@@ -602,11 +604,11 @@ section#battleground .listMartell {
   color: black; }
 
 section#battleground .listStark {
-  background-color: lightblue;
+  background-color: #e2e1e6;
   color: black; }
 
 section#battleground .listTyrell {
-  background-color: lightgreen;
+  background-color: #286836;
   color: black; }
 
 section#battleground .dropdown-toggle {

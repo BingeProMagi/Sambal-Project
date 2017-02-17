@@ -1,37 +1,34 @@
-// Global variables  	
+/// Global variables  	
 var playing = ["Hannes", "Sandra", "Malin", "Markus", "Gustav", "Rangvi"];
-var houses = ["Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Tyrell",];
+var houses = ["Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Tyrell"];
+var racerHouses = ["Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Tyrell"];
 var clickIndex;
 var play = [];
 var counter = 0;
-	// This is the DOM-Ready
+
+// This is the DOM-Ready
 $(function(){
 
-	
-
-	
+	// Creating Players
 	for(var i = 0; i < playing.length; i++){
 		
 		play[i] = new Players(playing[i]);
-	
 	};
-
 	
-	// click-function to start the battle
+	// Click-function that gets you to the battle 
 	$('#start').click(function(){
 		$('#battle-background').show();
   		$('#battle').show();
   		$('.knupp').css('display','block');
 
-  		
   		// Render Houses
   		play.forEach(function(players){
 	      players.renderAll();
 	      players.renderHouse();
 	   	});
-	   	
 	});
-
+	   	
+	// Click-function that decides house
 	$('.dinghouse').on("click", "li", function(){
 
 		var house = $(this).text();
@@ -84,7 +81,30 @@ $(function(){
 	      players.renderHouse();
 	   	});
 	});
-			
+	
+	// Randomizing houses 
+	$('#rand').click(function(){
+	
+		$('.dinghouse').html(" ");	
+		play.forEach(function(players){
+	      
+	      players.randomTeam();
+	      players.renderHouse();
+	   	});
+	   	racerHouses = ["Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Tyrell"];
+	});
+	
+	// starting the battle
+	$("#startMatch").click(function(){
+		$('.dingdong').html(" ");
+	  	$('.dinghouse').html(" ");	  	
+	  	$('#rand').css('display','none');
+	  	$('#startMatch').css('display','none');
+	  	$('#mostWins').css('display','none');
+	  	$('#last').css('display','none');
+	  	
+	});
+	
 	// click-function to end the battle
 	$('#end').click(function(){
 		$(this).parent().hide();
@@ -93,20 +113,4 @@ $(function(){
 	  	$('.dingdong').html(" ");
 	  	$('.dinghouse').html(" ");
 	});
-
-	      		
-
-
-
-	
-	
-
-		
-	
-	// alla variablar ska tas upp härifån!!!!!!!!!!!
-}); 
-	
-	
-	/*function renderHouse(){
-		
-	};*/
+});
