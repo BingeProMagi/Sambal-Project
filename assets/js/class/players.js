@@ -1,8 +1,9 @@
 // Players class
-
+// glyphicon glyphicon-chevron-up
+// glyphicon glyphicon-chevron-down
 function Players(name){
 	this.name = name;
-	this.castle = " ";
+	this.castle = 0;
 	this.wins = " ";
 	this.lastWin = " ";
 	this.currentTeam = false;
@@ -11,6 +12,11 @@ function Players(name){
 Players.prototype.renderAll = function(){
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.dingdong').append(creator);
+};
+
+Players.prototype.renderScoreBoard = function(){
+	var creator = $('<li class="list-group-item scoreplayers playa'+ this.name +'">'+ this.name +'<button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></li>');
+	$('.scoredong').append(creator);
 };
 
 Players.prototype.changeTeam = function(input){

@@ -20,6 +20,7 @@ $(function(){
 		$('#battle-background').show();
   		$('#battle').show();
   		$('.knupp').css('display','block');
+  		$('#startMatch').css('display', 'block');
 
   		// Render Houses
   		play.forEach(function(players){
@@ -102,6 +103,10 @@ $(function(){
 	  	$('#startMatch').css('display','none');
 	  	$('#mostWins').css('display','none');
 	  	$('#last').css('display','none');
+
+	  	play.forEach(function(players){
+	      players.renderScoreBoard();
+	   	});
 	  	
 	});
 	
@@ -113,4 +118,5 @@ $(function(){
 	  	$('.dingdong').html(" ");
 	  	$('.dinghouse').html(" ");
 	});
+});
 });
