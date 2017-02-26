@@ -119,4 +119,3 @@ $(function(){
 	  	$('.dinghouse').html(" ");
 	});
 });
-});

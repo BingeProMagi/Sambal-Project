@@ -6,16 +6,16 @@ function Players(name){
 	this.castle = 0;
 	this.wins = " ";
 	this.lastWin = " ";
-	this.currentTeam = false;
+	this.currentTeam = fa
+lse;
 };
-
 Players.prototype.renderAll = function(){
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.dingdong').append(creator);
 };
 
 Players.prototype.renderScoreBoard = function(){
-	var creator = $('<li class="list-group-item scoreplayers playa'+ this.name +'">'+ this.name +'<button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></li>');
+	var creator = $('<li class="list-group-item scoreplayers playa'+ this.name +'">'+ this.name +'<button type="button" class="btn btn-default" aria-label="Right Align"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button><button type="button" class="btn btn-default" aria-label="Right Align"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button><span class="badge">'+ this.castle +'</span></li>');
 	$('.scoredong').append(creator);
 };
 
