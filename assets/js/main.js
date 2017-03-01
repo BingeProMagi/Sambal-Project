@@ -43,7 +43,6 @@ $(function(){
 		}else if( $(this).parent().hasClass('dropSandra') ){
 			play.forEach(function(players){
 	      		if(players.name == "Sandra"){
-	      			
 	      			players.changeTeam(house);
 	      		}else{return "no";}
 	   		});
@@ -83,6 +82,24 @@ $(function(){
 	   	});
 	});
 	
+	$('.scoredong').on("click", ".plus", function(){
+
+		if($(this).parent().hasClass('playaHannes')){
+			//play.addCastle(play, "Hannes");
+			play.forEach(function(players){
+	      		if(players.name == "Hannes"){
+	      			players.castle++;
+	      			$('.scoredong').html(" ");
+	      			
+	      			play.forEach(function(players){
+	     			players.renderScoreBoard();
+	   			});	
+	      		}else{return "no";}
+	});
+		}		
+
+	});
+
 	// Randomizing houses 
 	$('#rand').click(function(){
 	

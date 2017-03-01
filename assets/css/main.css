@@ -642,3 +642,12 @@ section#battleground .dropdown-menu {
 
 section#battleground .listGreyjoy {
   color: white; }
+
+section#battleground .badge {
+  font-size: 20px;
+  padding: 8px 12px;
+  background-color: green; }
+
+section#battleground .minus {
+  margin-left: 5px;
+  height: 34px; }

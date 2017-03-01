@@ -6,8 +6,7 @@ function Players(name){
 	this.castle = 0;
 	this.wins = " ";
 	this.lastWin = " ";
-	this.currentTeam = fa
-lse;
+	this.currentTeam = false;
 };
 Players.prototype.renderAll = function(){
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
@@ -15,7 +14,7 @@ Players.prototype.renderAll = function(){
 };
 
 Players.prototype.renderScoreBoard = function(){
-	var creator = $('<li class="list-group-item scoreplayers playa'+ this.name +'">'+ this.name +'<button type="button" class="btn btn-default" aria-label="Right Align"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button><button type="button" class="btn btn-default" aria-label="Right Align"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button><span class="badge">'+ this.castle +'</span></li>');
+	var creator = $('<li class="list-group-item scoreplayers playa'+ this.name +'">'+ this.name +'<button type="button" class="btn btn-default pull-left plus" aria-label="Right Align"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button><button type="button" class="btn btn-default pull-left minus" aria-label="Right Align"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button><span class="badge">'+ this.castle +'</span></li>');
 	$('.scoredong').append(creator);
 };
 
