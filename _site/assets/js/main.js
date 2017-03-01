@@ -85,20 +85,54 @@ $(function(){
 	$('.scoredong').on("click", ".plus", function(){
 
 		if($(this).parent().hasClass('playaHannes')){
-			//play.addCastle(play, "Hannes");
-			play.forEach(function(players){
-	      		if(players.name == "Hannes"){
-	      			players.castle++;
-	      			$('.scoredong').html(" ");
-	      			
-	      			play.forEach(function(players){
-	     			players.renderScoreBoard();
-	   			});	
-	      		}else{return "no";}
+	      	plusCastle(play, "Hannes");
+		}
+		else if($(this).parent().hasClass('playaSandra')){
+	      	plusCastle(play, "Sandra");
+		}	
+		else if($(this).parent().hasClass('playaMalin')){
+	      	plusCastle(play, "Malin");
+		}
+		else if($(this).parent().hasClass('playaMarkus')){
+	      	plusCastle(play, "Markus");
+		}
+		else if($(this).parent().hasClass('playaGustav')){
+	      	plusCastle(play, "Gustav");
+		}
+		else if($(this).parent().hasClass('playaRangvi')){
+	      	plusCastle(play, "Rangvi");
+		}else{ return "Hejdå"}
 	});
-		}		
+	$('.scoredong').on("click", ".minus", function(){				
 
-	});
+		if($(this).parent().hasClass('playaHannes')){
+		    minusCastle(play, "Hannes");
+		}
+		else if($(this).parent().hasClass('playaSandra')){
+	      	minusCastle(play, "Sandra");
+		}	
+		else if($(this).parent().hasClass('playaMalin')){
+	      	minusCastle(play, "Malin");
+		}
+		else if($(this).parent().hasClass('playaMarkus')){
+	      	minusCastle(play, "Markus");
+		}
+		else if($(this).parent().hasClass('playaGustav')){
+	      	minusCastle(play, "Gustav");
+		}
+		else if($(this).parent().hasClass('playaRangvi')){
+	      	minusCastle(play, "Rangvi");
+		}else{ return "Hejdå"}
+		
+		play.sort(function(a, b) {
+    			return parseFloat(b.castle) - parseFloat(a.castle);
+		});
+		play.forEach(function(players){
+ 				players.renderScoreBoard();
+  		});
+	});	
+		
+	
 
 	// Randomizing houses 
 	$('#rand').click(function(){

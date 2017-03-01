@@ -41,10 +41,42 @@ Players.prototype.renderHouse = function(){
 	}
 };
 
-Players.prototype.castle = function(input){
-	// 
-	this.castle = input;
-	
+function plusCastle(obj, name){
+	//
+	obj.forEach(function(players){
+	    if(players.name == name){
+  			// Adding a castle to the right player
+  			players.castle++;
+  			// Removes the scoreboard
+  			$('.scoredong').html(" ");
+  			// Sorting array
+  			obj.sort(function(a, b) {
+    			return parseFloat(b.castle) - parseFloat(a.castle);
+			});
+  			// Rendering the scoreboard
+  			obj.forEach(function(players){
+ 				players.renderScoreBoard();
+  			});
+  		}
+  		else{return "no";}
+	});
+};
+function minusCastle(obj, name){
+	//
+	obj.forEach(function(players){
+	    if(players.name == name){
+  			// Minus a castle to the right player
+  			players.castle = players.castle - 1;
+  			console.log("Minus mannen", players.castle);
+  			// Removes the scoreboard
+  			$('.scoredong').html(" ");
+  			// Sorting array
+  			
+  			// Rendering the scoreboard
+  			
+  		}
+  		else{return "no";}
+	});
 };
 
 Players.prototype.wins = function(input){
@@ -59,7 +91,7 @@ Players.prototype.lastWin = function(input){
 	
 };
 
-Players.prototype.currentTeamasd = function(input){
+Players.prototype.currentTeam = function(input){
 	// 
 	this.currentTeam = input;
 	
