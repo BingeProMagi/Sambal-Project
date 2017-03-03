@@ -1,4 +1,5 @@
-/// Global variables  	
+/// Global variables
+// Till timer http://flipclockjs.com/	 	
 var playing = ["Hannes", "Sandra", "Malin", "Markus", "Gustav", "Rangvi"];
 var houses = ["Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Tyrell"];
 var racerHouses = ["Baratheon", "Greyjoy", "Lannister", "Martell", "Stark", "Tyrell"];
@@ -14,12 +15,20 @@ $(function(){
 		
 		play[i] = new Players(playing[i]);
 	};
-	
+	// Render Lastwinner
+	play.forEach(function(players){
+		players.renderLastWinner();
+	});
+
 	// Click-function that gets you to the battle 
 	$('#start').click(function(){
 		$('#battle-background').show();
   		$('#battle').show();
   		$('.knupp').css('display','block');
+  		$('#rand').css('display','block');
+	  	$('#startMatch').css('display','block');
+	  	$('#mostWins').css('display','block');
+	  	$('#last').css('display','block');
   		$('#startMatch').css('display', 'block');
 
   		// Render Houses
@@ -82,6 +91,7 @@ $(function(){
 	   	});
 	});
 	
+	// Adding castles to players
 	$('.scoredong').on("click", ".plus", function(){
 
 		if($(this).parent().hasClass('playaHannes')){
@@ -103,6 +113,7 @@ $(function(){
 	      	plusCastle(play, "Rangvi");
 		}else{ return "Hejdå"}
 	});
+	// Removing castles from players
 	$('.scoredong').on("click", ".minus", function(){				
 
 		if($(this).parent().hasClass('playaHannes')){
@@ -154,6 +165,7 @@ $(function(){
 	  	$('#startMatch').css('display','none');
 	  	$('#mostWins').css('display','none');
 	  	$('#last').css('display','none');
+	  	$('#endMatch').css('display','block');
 
 	  	play.forEach(function(players){
 	      players.renderScoreBoard();
@@ -162,11 +174,26 @@ $(function(){
 	});
 	
 	// click-function to end the battle
-	$('#end').click(function(){
+	$('#endMatch').click(function(){
+		// Hideing Buttons and Lists
 		$(this).parent().hide();
 	  	$('#battle-background').css('display','none');
 	  	$('#battle').css('display','none');
+	  	$('#endMatch').css('display','none');
+	  	$('.scoredong').html(" ");
 	  	$('.dingdong').html(" ");
 	  	$('.dinghouse').html(" ");
+	  	$('.lastWinner').html(" ");
+	  	// 
+	  	play.forEach(function(players){
+	  		counter++
+	  		players.lastWinner(counter);
+	  		
+	  	});
+	  	play.forEach(function(players){
+	  		
+	  		players.renderLastWinner();
+	  	});
+
 	});
 });

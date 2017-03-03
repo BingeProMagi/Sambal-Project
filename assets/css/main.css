@@ -509,6 +509,8 @@ section.main .row {
   margin-top: 20px; }
   section.main .row h3 {
     text-align: center; }
+  section.main .row #start {
+    margin-bottom: 40px; }
 
 section.main .badge {
   font-size: 20px;
@@ -521,14 +523,6 @@ section.wrapper {
     background-image-position: center;
     background-image-size: cover;
     background-image-height: 100vh; }
-  section.wrapper .btn {
-    background-color: #e6ac00;
-    border-color: #8f6b00;
-    position: absolute;
-    left: 50vw;
-    top: 35vh; }
-    section.wrapper .btn:hover {
-      background-color: #b48110; }
 
 section#battleground #battle-background {
   position: fixed;
@@ -558,6 +552,12 @@ section#battleground #battle {
       background-color: #e6ac00;
       border-color: #8f6b00; }
       section#battleground #battle .row #end:hover {
+        background-color: #b48110; }
+    section#battleground #battle .row #endMatch {
+      display: none;
+      background-color: #e6ac00;
+      border-color: #8f6b00; }
+      section#battleground #battle .row #endMatch:hover {
         background-color: #b48110; }
     section#battleground #battle .row #mostWins {
       background-color: #a32f1d;
@@ -651,3 +651,8 @@ section#battleground .badge {
 section#battleground .minus {
   margin-left: 5px;
   height: 34px; }
+  section#battleground .minus:hover {
+    background-color: red; }
+
+section#battleground .plus:hover {
+  background-color: green; }

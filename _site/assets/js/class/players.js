@@ -5,9 +5,16 @@ function Players(name){
 	this.name = name;
 	this.castle = 0;
 	this.wins = " ";
-	this.lastWin = " ";
+	this.lastWin= 0;
 	this.currentTeam = false;
+	
 };
+Players.prototype.renderLastWinner = function() {
+
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
+	$('.lastWinner').append(creator);
+};
+
 Players.prototype.renderAll = function(){
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.dingdong').append(creator);
@@ -69,14 +76,16 @@ function minusCastle(obj, name){
   			players.castle = players.castle - 1;
   			console.log("Minus mannen", players.castle);
   			// Removes the scoreboard
-  			$('.scoredong').html(" ");
-  			// Sorting array
-  			
-  			// Rendering the scoreboard
-  			
+  			$('.scoredong').html(" ");	
   		}
-  		else{return "no";}
+  		else{return "No, this ain't working";}
 	});
+};
+
+Players.prototype.lastWinner = function(input){
+	// 
+	this.lastWin = input;
+	
 };
 
 Players.prototype.wins = function(input){
@@ -85,11 +94,6 @@ Players.prototype.wins = function(input){
 	
 };
 
-Players.prototype.lastWin = function(input){
-	// 
-	this.lastWin = input;
-	
-};
 
 Players.prototype.currentTeam = function(input){
 	// 
