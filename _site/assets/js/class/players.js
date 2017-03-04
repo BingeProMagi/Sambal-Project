@@ -4,7 +4,8 @@
 function Players(name){
 	this.name = name;
 	this.castle = 0;
-	this.wins = " ";
+	this.totCastle =0;
+	this.wins = 0;
 	this.lastWin= 0;
 	this.currentTeam = false;
 	
@@ -14,7 +15,16 @@ Players.prototype.renderLastWinner = function() {
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.lastWinner').append(creator);
 };
+Players.prototype.renderMostWins = function() {
 
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="badge">'+ this.wins +'</span></li>');
+	$('.mostWins').append(creator);
+};
+Players.prototype.renderCastleLeague = function() {
+
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="badge">'+ this.castle +'</span></li>');
+	$('.castleLeague').append(creator);
+};
 Players.prototype.renderAll = function(){
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.dingdong').append(creator);
@@ -88,9 +98,9 @@ Players.prototype.lastWinner = function(input){
 	
 };
 
-Players.prototype.wins = function(input){
+Players.prototype.howManyWins = function(){
 	// 
-	this.wins = input;
+	this.wins++;
 	
 };
 

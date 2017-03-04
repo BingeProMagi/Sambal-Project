@@ -15,9 +15,10 @@ $(function(){
 		
 		play[i] = new Players(playing[i]);
 	};
-	// Render Lastwinner
+	// Render LastWinner, MostWins and CastleLeague
 	play.forEach(function(players){
 		players.renderLastWinner();
+		players.renderMostWins();
 	});
 
 	// Click-function that gets you to the battle 
@@ -194,6 +195,8 @@ $(function(){
 	  		
 	  		players.renderLastWinner();
 	  	});
+	  	// "saving" winners statistics
+	  	play[0].howManyWins();
 
 	});
 });

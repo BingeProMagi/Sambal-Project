@@ -4,12 +4,18 @@
 function Players(name){
 	this.name = name;
 	this.castle = 0;
-	this.wins = " ";
+	this.totCastle =0;
+	this.wins = 0;
 	this.lastWin= 0;
 	this.currentTeam = false;
 	
 };
 Players.prototype.renderLastWinner = function() {
+
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="span">'+ this.wins +'</span></li>');
+	$('.lastWinner').append(creator);
+};
+Players.prototype.renderMostWins = function() {
 
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.lastWinner').append(creator);
@@ -88,9 +94,9 @@ Players.prototype.lastWinner = function(input){
 	
 };
 
-Players.prototype.wins = function(input){
+Players.prototype.howManyWins = function(){
 	// 
-	this.wins = input;
+	this.wins++;
 	
 };
 
