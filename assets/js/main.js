@@ -185,6 +185,7 @@ $(function(){
 	  	$('.dingdong').html(" ");
 	  	$('.dinghouse').html(" ");
 	  	$('.lastWinner').html(" ");
+	  	$('.mostWins').html(" ");
 	  	// 
 	  	play.forEach(function(players){
 	  		counter++
@@ -192,11 +193,13 @@ $(function(){
 	  		
 	  	});
 	  	play.forEach(function(players){
-	  		
+	  		;
 	  		players.renderLastWinner();
 	  	});
 	  	// "saving" winners statistics
 	  	play[0].howManyWins();
-
+	  	play.forEach(function(players){
+	  		players.renderMostWins();
+	  	});
 	});
 });

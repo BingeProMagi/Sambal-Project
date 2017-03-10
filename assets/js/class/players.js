@@ -12,15 +12,19 @@ function Players(name){
 };
 Players.prototype.renderLastWinner = function() {
 
-	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="span">'+ this.wins +'</span></li>');
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.lastWinner').append(creator);
 };
 Players.prototype.renderMostWins = function() {
 
-	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
-	$('.lastWinner').append(creator);
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="badge">'+ this.wins +'</span></li>');
+	$('.mostWins').append(creator);
 };
+Players.prototype.renderCastleLeague = function() {
 
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="badge">'+ this.castle +'</span></li>');
+	$('.castleLeague').append(creator);
+};
 Players.prototype.renderAll = function(){
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.dingdong').append(creator);
