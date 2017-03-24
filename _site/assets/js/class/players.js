@@ -4,27 +4,32 @@
 function Players(name){
 	this.name = name;
 	this.castle = 0;
-	this.totCastle =0;
+	this.totCastle = 0;
 	this.wins = 0;
 	this.lastWin= 0;
 	this.currentTeam = false;
-	
 };
+	
+
 Players.prototype.renderLastWinner = function() {
 
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.lastWinner').append(creator);
 };
+
 Players.prototype.renderMostWins = function() {
 
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="badge">'+ this.wins +'</span></li>');
 	$('.mostWins').append(creator);
 };
+
+
 Players.prototype.renderCastleLeague = function() {
 
-	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="badge">'+ this.castle +'</span></li>');
+	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'<span class="badge">'+ this.totCastle +'</span></li>');
 	$('.castleLeague').append(creator);
 };
+
 Players.prototype.renderAll = function(){
 	var creator = $('<li class="list-group-item players playa'+ this.name +'">'+ this.name +'</li>');
 	$('.dingdong').append(creator);
@@ -78,6 +83,7 @@ function plusCastle(obj, name){
   		else{return "no";}
 	});
 };
+
 function minusCastle(obj, name){
 	//
 	obj.forEach(function(players){
@@ -90,6 +96,12 @@ function minusCastle(obj, name){
   		}
   		else{return "No, this ain't working";}
 	});
+};
+
+Players.prototype.resetCastle = function(){
+
+	this.totCastle = this.totCastle + this.castle;
+	this.castle = 0;
 };
 
 Players.prototype.lastWinner = function(input){

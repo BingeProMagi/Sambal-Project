@@ -505,12 +505,29 @@ section.header {
     margin: 0;
     text-transform: uppercase; }
 
+@media (max-width: 830px) {
+  section.header h1 {
+    font-size: 50px;
+    padding-top: 40px; } }
+
+@media (max-width: 650px) {
+  section.header h1 {
+    padding-top: 24px; } }
+
 section.main .row {
   margin-top: 20px; }
   section.main .row h3 {
     text-align: center; }
   section.main .row #start {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    height: 80px;
+      height-width: 300px;
+      height-font-size: larger; }
+
+section.main .list-group-item {
+  background-color: darkslategrey;
+  border-color: #996B04;
+  color: white; }
 
 section.main .badge {
   font-size: 20px;
@@ -546,7 +563,7 @@ section#battleground #battle {
   -webkit-box-shadow: 0px 5px 8px 6px rgba(0, 0, 0, 0.49);
           box-shadow: 0px 5px 8px 6px rgba(0, 0, 0, 0.49); }
   section#battleground #battle .row {
-    margin-top: 7vh; }
+    margin-top: 6vh; }
     section#battleground #battle .row #end {
       background-color: #e6ac00;
       border-color: #8f6b00; }
@@ -576,6 +593,11 @@ section#battleground #battle {
       section#battleground #battle .row #startMatch:hover {
         background-color: #b48110; }
 
+section#battleground .list-group-item, section#battleground .dropdown-toggle {
+  background-color: #4D4129;
+  border-color: #996B04;
+  color: white; }
+
 section#battleground .dingdong {
   margin-top: 6vh;
   text-align: center;
@@ -588,8 +610,7 @@ section#battleground .scoredong {
 
 section#battleground .dinghouse {
   margin-top: 6vh;
-  text-align: center;
-  width: 30vw; }
+  text-align: center; }
 
 section#battleground .listBaratheon {
   background-color: #f5ed68;
@@ -655,3 +676,56 @@ section#battleground .minus {
 
 section#battleground .plus:hover {
   background-color: green; }
+
+@media (max-width: 1000px) {
+  section#battleground .dinghouse {
+    margin-top: 10px;
+    font-size: 20px; }
+  section#battleground .dingdong {
+    margin-top: 10px;
+    width: 220px; }
+  section#battleground .scoredong {
+    font-size: 20px; }
+  section#battleground .dropdown-toggle {
+    font-size: 20px;
+    width: 220px;
+    height: 53px; }
+  section#battleground .knupp {
+    padding-bottom: 20px;
+    margin-top: 20px; } }
+
+@media (max-width: 650px) {
+  section#battleground {
+    font-size: 15px; }
+    section#battleground #battle {
+      width: 94vw;
+      height: 96vh;
+      top: 2vh;
+      left: 3vw; }
+      section#battleground #battle .row {
+        margin-top: 3vh; }
+      section#battleground #battle h1 {
+        padding-top: 24px; }
+    section#battleground .scoredong {
+      width: 270px; }
+    section#battleground .dingdong {
+      width: 130px;
+      margin-top: 0px; }
+    section#battleground .house {
+      width: 130px; }
+    section#battleground .dinghouse {
+      margin-top: 0px; }
+    section#battleground .knupp {
+      margin-top: 0px; }
+    section#battleground .dropdown-toggle {
+      font-size: 15px;
+      height: 45px; }
+    section#battleground .dropdown-menu {
+      width: 140px;
+      margin-left: -20px;
+      font-size: 13px; }
+      section#battleground .dropdown-menu li {
+        height: 34px;
+        padding-top: 8px; }
+    section#battleground #startMatch {
+      margin-top: 35px; } }

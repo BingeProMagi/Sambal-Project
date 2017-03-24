@@ -24,10 +24,10 @@ section#battleground
 		top: 5vh
 		left: 5vw 
 		box-shadow: 0px 5px 8px 6px rgba(0,0,0,0.49)
-	
+		
 
 		.row
-			margin-top: 7vh	
+			margin-top: 6vh	
 			// Buttons
 			.knupp
 				
@@ -63,6 +63,12 @@ section#battleground
 				&:hover
 					background-color: rgb(180, 129, 16)
 	
+	.list-group-item, .dropdown-toggle
+		background-color: #4D4129
+		border-color: #996B04
+		color: white
+		
+
 	.dingdong
 		margin-top: 6vh
 		text-align: center
@@ -75,7 +81,7 @@ section#battleground
 	.dinghouse
 		margin-top: 6vh
 		text-align: center
-		width: 30vw
+		
 	.listBaratheon
 		background-color: rgb(245,237,104)
 		color: black
@@ -134,3 +140,72 @@ section#battleground
 	.plus
 		&:hover
 			background-color: green
+
+
+
+@media (max-width: 1000px)
+
+	section#battleground
+		
+		
+		
+		
+		
+		#battle 
+			
+			
+		.dinghouse
+			margin-top: 10px
+			font-size: 20px
+		.dingdong
+			margin-top: 10px
+			width: 220px
+		.scoredong
+			font-size: 20px
+		.dropdown-toggle
+			font-size: 20px	
+			width: 220px
+			height: 53px
+
+		.knupp
+			padding-bottom: 20px
+			margin-top: 20px
+
+
+@media (max-width: 650px)
+	section#battleground
+		
+		font-size: 15px
+		#battle
+			width: 94vw
+			height: 96vh
+			top: 2vh
+			left: 3vw
+			.row
+				margin-top: 3vh
+			h1
+				padding-top: 24px
+		.scoredong
+			width: 270px
+		.dingdong
+			width: 130px
+			margin-top: 0px
+		.house
+			width: 130px
+
+		.dinghouse
+			margin-top: 0px
+		.knupp
+			margin-top: 0px
+		.dropdown-toggle
+			font-size: 15px
+			height: 45px
+		.dropdown-menu
+			width: 140px
+			margin-left: -20px
+			font-size: 13px
+			li
+				height: 34px
+				padding-top: 8px
+		#startMatch
+			margin-top: 35px

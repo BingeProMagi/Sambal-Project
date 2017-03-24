@@ -15,13 +15,15 @@ $(function(){
 		
 		play[i] = new Players(playing[i]);
 	};
+	
 	// Render LastWinner, MostWins and CastleLeague
 	play.forEach(function(players){
 		players.renderLastWinner();
 		players.renderMostWins();
+  		players.renderCastleLeague();
 	});
 
-	// Click-function that gets you to the battle 
+	// Click-function that gets you to the battlground 
 	$('#start').click(function(){
 		$('#battle-background').show();
   		$('#battle').show();
@@ -186,6 +188,7 @@ $(function(){
 	  	$('.dinghouse').html(" ");
 	  	$('.lastWinner').html(" ");
 	  	$('.mostWins').html(" ");
+	  	$('.castleLeague').html(" ");
 	  	// 
 	  	play.forEach(function(players){
 	  		counter++
@@ -193,13 +196,34 @@ $(function(){
 	  		
 	  	});
 	  	play.forEach(function(players){
-	  		;
+	  		
 	  		players.renderLastWinner();
 	  	});
-	  	// "saving" winners statistics
+	  	// "Saving" winners statistics
 	  	play[0].howManyWins();
+	  	// Sorting after most wins
 	  	play.forEach(function(players){
+	  		play.sort(function(a, b) {
+    			return parseFloat(b.wins) - parseFloat(a.wins);
+			});
+	  	});
+
+	  	play.forEach(function(players){
+	  		
 	  		players.renderMostWins();
 	  	});
+	  	// reset castle on each player
+	  	play.forEach(function(players){
+	  		players.resetCastle();
+	  	});
+	  	// sortin array for Castle League
+	  	play.forEach(function(players){
+	  		play.sort(function(a, b) {
+    			return parseFloat(b.totCastle) - parseFloat(a.totCastle);
+			});
+	  	});
+	  	play.forEach(function(players){
+	  		players.renderCastleLeague();
+	  	});	
 	});
 });
